@@ -1,0 +1,44 @@
+.comments {
+  width: 100%;
+}
+.comments__box {
+  display: flex;
+  font-weight: normal;
+  font-size: 20px;
+  width: 500px;
+  margin: 0 auto;
+  justify-content: space-between;
+  position: relative;
+}
+.comments__box__time {
+  font-size: 10px;
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  right: 80px;
+  top: 13px;
+}
+
+.movie-show {
+  margin-top: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+.movie-show__title {
+  font-size: 20px;
+}
+.comment {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.comment__area {
+  width: 400px;
+}
+.comment__btn {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  margin-left: 30px;
+}

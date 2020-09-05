@@ -30,10 +30,11 @@ class MoviesController < ApplicationController
   end
 
   def create
-  
+
     @movie = Movie.new(movie_params)
     @movie.user_id = current_user.id
     if @movie.save!
+      # binding.pry
 
       redirect_to root_path
     else
@@ -43,7 +44,7 @@ class MoviesController < ApplicationController
 
 private
   def movie_params
-    params.require(:movie).permit(:title, :body, :image ,:category, :sub_category).merge(user_id: current_user.id)    #ここ追加しました0829
+    params.require(:movie).permit(:title, :body, :image, :category, :sub_category).merge(user_id: current_user.id)    #ここ追加しました0829
   end
 
 end

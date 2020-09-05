@@ -4,7 +4,7 @@
     <div class="wrapper__movies__box">
 
       <% @movies.each do |movie| %>
-        <%= link_to movie_path(movie), class: "item-link c#{movie.category}" do %>
+        <%= link_to movie_path(movie), class: "item-link c#{movie.category} sc#{movie.sub_category}" do %>
           <%= image_tag movie.image.to_s, size: "300x200" %>
           <div class="wrapper__movies__box__name">
             <div class="wrapper__movies__box__name__ti">

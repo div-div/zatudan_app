@@ -26,16 +26,52 @@
 .wrapper__movies__box__nick__ti {
   font-weight: bold;
 }
-     
+
 .item-link{
   text-decoration: none;
   color:black;
 }
 // ここ追加しました20200828
-.slide{     
+.slide{
   display:none;
   position: absolute;
   z-index: 1;
   background-color: azure;
   font-size: 15px;
+}
+.c_cook{
+  display:none;
+  position: absolute;
+  left:30px;
+  top:40px;
+  width:50px;
+  background-color: azure;
+  text-align: center;
+}
+.c_movie{
+  display:none;
+  position: absolute;
+  left:30px;
+  top:40px;
+  width:50px;
+  background-color: azure;
+  text-align: center;
+}
+.c_gym{
+  display:none;
+  position: absolute;
+  left:30px;
+  top:40px;
+  width:50px;
+  background-color: azure;
+  text-align: center;
+}
+.c_music{
+  display:none;
+  position: absolute;
+  left:30px;
+  top:40px;
+  width:50px;
+  background-color: azure;
+  text-align: center;
 }

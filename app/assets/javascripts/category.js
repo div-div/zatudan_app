@@ -1,56 +1,57 @@
 $(function(){
-  
+// console.log(3);
   $('select#parent_category').change(function() {
+
     //選択したvalue値を変数に格納
     var val = $(this).val();  //選択したセレクトボックスの選択肢のValueを変数にいれる。
     switch (val) {
       case "---":
         $('#sub-category').remove();   //子カテゴリーを消す。↓のvalueがDBに保存される。今はまだDBの構造がこのやり方と違うので入らない。
       break;
-      case "料理":
+      case "1":
         $('#sub-category').remove();   //子カテゴリーを消す。↓のvalueがDBに保存される。今はまだDBの構造がこのやり方と違うので入らない。
         var select_cook = `<div class='select_box' id='sub-category'>
                                  <p>小カテゴリー</p>
-                                 <select class="wrap__new-movie__field__window" id="child_category" name="sub_category">
-                                   <option value="1" >和</option>    
-                                   <option value="2" >洋</option> 
-                                   <option value="3" >中</option> 
+                                 <select class="wrap__new-movie__field__window" id="child_category" name="movie[sub_category]">
+                                   <option value="1" >和</option>
+                                   <option value="2" >洋</option>
+                                   <option value="3" >中</option>
                                  <select>
                            </div>`;
         $('.category').append(select_cook);  //select_cookを親カテゴリーのしたに追加する
       break;
-      case "映画":
+      case "2":
         $('#sub-category').remove();
         var select_movie = `<div class='select_box' id='sub-category'>
                                  <p>小カテゴリー</p>
-                                 <select class="wrap__new-movie__field__window" id="child_category" name="sub_category">
-                                   <option value="4" >アクション</option> 
-                                   <option value="5" >コメディ</option> 
-                                   <option value="6" >ホラー</option> 
+                                 <select class="wrap__new-movie__field__window" id="child_category" name="movie[sub_category]">
+                                   <option value="4" >アクション</option>
+                                   <option value="5" >コメディ</option>
+                                   <option value="6" >ホラー</option>
                                  <select>
                            </div>`;
         $('.category').append(select_movie);
       break;
-      case "ジム・トレーニング":
+      case "3":
         $('#sub-category').remove();
         var select_gym = `<div class='select_box' id='sub-category'>
                                  <p>小カテゴリー</p>
-                                 <select class="wrap__new-movie__field__window" id="child_category" name="sub_category">
-                                   <option value="7" >上半身</option> 
-                                   <option value="8" >下半身</option> 
-                                   <option value="9" >ストレッチ</option> 
+                                 <select class="wrap__new-movie__field__window" id="child_category" name="movie[sub_category]">
+                                   <option value="7" >上半身</option>
+                                   <option value="8" >下半身</option>
+                                   <option value="9" >ストレッチ</option>
                                  <select>
-                           </div>`;
+                          </div>`;
         $('.category').append(select_gym);
       break;
-      case "音楽":
+      case "4":
         $('#sub-category').remove();
         var select_music = `<div class='select_box' id='sub-category'>
                                  <p>小カテゴリー</p>
-                                 <select class="wrap__new-movie__field__window" id="child_category" name="sub_category">
-                                   <option value="10" >ヒップホップ</option> 
-                                   <option value="11" >LO-FI</option> 
-                                   <option value="12" >ロック</option> 
+                                 <select class="wrap__new-movie__field__window" id="child_category" name="movie[sub_category]">
+                                   <option value="10" >ヒップホップ</option>
+                                   <option value="11" >LO-FI</option>
+                                   <option value="12" >ロック</option>
                                  <select>
                            </div>`;
         $('.category').append(select_music);
@@ -60,14 +61,14 @@ $(function(){
 
   $('.cat__btn').click(    //ここはホバーよりクリックの方が良いと思います。
     function() {
-        
+
       $(this).next('.slide').slideToggle();
-        
+
     },
     function() {
-        
+
       $(this).next('.slide').slideToggle();
-        
+
     }
   );
   $('.s_all').click(    //ここはホバーよりクリックの方が良いと思います。
@@ -80,6 +81,7 @@ $(function(){
   );
   $('.s_cook').click(    //ここはホバーよりクリックの方が良いと思います。
     function() {
+
         $('.c1').show();
         $('.c2').hide();
         $('.c3').hide();
@@ -110,10 +112,53 @@ $(function(){
         $('.c4').show();
     }
   );
-
+  $('.s_cook').hover(    //ここはホバーよりクリックの方が良いと思います。
+    function() {
+      $(this).children('.c_cook').show();
+    },function(){
+      $(this).children('.c_cook').hide();
+    }
+  );
+  $('.s_movie').hover(    //ここはホバーよりクリックの方が良いと思います。
+    function() {
+      $(this).children('.c_movie').show();
+    },function(){
+      $(this).children('.c_movie').hide();
+    }
+  );
+  $('.s_gym').hover(    //ここはホバーよりクリックの方が良いと思います。
+    function() {
+      $(this).children('.c_gym').show();
+    },function(){
+      $(this).children('.c_gym').hide();
+    }
+  );
+  $('.s_music').hover(    //ここはホバーよりクリックの方が良いと思います。
+    function() {
+      $(this).children('.c_music').show();
+    },function(){
+      $(this).children('.c_music').hide();
+    }
+  );
+  $('.co_1').click(    //ここはホバーよりクリックの方が良いと思います。
+    function() {
+        $('.sc1').show();
+        $('.sc2').hide();
+        $('.sc3').hide();
+        $('.sc4').hide();
+    }
+  );
+  $('.co_2').click(    //ここはホバーよりクリックの方が良いと思います。
+    function() {
+        $('.sc1').hide();
+        $('.sc2').show();
+        $('.sc3').hide();
+        $('.sc4').hide();
+    }
+  );
 
 });
-  
+
 
   // カテゴリーセレクトボックスのオプションを作成
   // function appendOption(category){

@@ -62,12 +62,12 @@ $(function(){
   $('.cat__btn').click(    //ここはホバーよりクリックの方が良いと思います。
     function() {
 
-      $(this).next('.slide').slideToggle();
+      $(this).next('.slide').slideToggle('fast');
 
     },
     function() {
 
-      $(this).next('.slide').slideToggle();
+      $(this).next('.slide').slideToggle('fast');
 
     }
   );

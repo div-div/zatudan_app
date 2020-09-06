@@ -5,7 +5,7 @@
       <% if user_signed_in? %>
         <div class="item">
           <%= current_user.nickname %>
-          <%= link_to "logout", destroy_user_session_path, method: :delete, class: 'log_btn' %>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'log_btn' %>
         </div>
         <div class="postMovie">
           <%= link_to new_movie_path, class: 'log_btn' do %>
@@ -19,16 +19,16 @@
         </div>
       <% else %>
         <div class="item">
-          <%= link_to "login", new_user_session_path, class: 'log_btn' %>
+          <%= link_to "ログイン", new_user_session_path, class: 'log_btn' %>
         </div>
         <div class="item">
-          <%= link_to "sign_up", new_user_registration_path, class: 'log_btn' %>
+          <%= link_to "新規登録", new_user_registration_path, class: 'log_btn' %>
         </div>
       <% end %>
     </div>
   </div>
   <div class="cat">
-    <%= link_to "category", "#", class: "cat__btn" %>
+    <%= link_to "カテゴリー", "#", class: "cat__btn" %>
     <div class="slide">
       <p class="s_all">All</p>
       <div class="s_cook">料理

@@ -33,45 +33,61 @@
 }
 // ここ追加しました20200828
 .slide{
+  background: rgba(45,45,45, 0.7);
   display:none;
   position: absolute;
   z-index: 1;
-  background-color: azure;
   font-size: 15px;
+  width:70px;
+  height:300px;
+  color:white;
+  line-height: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
 }
 .c_cook{
   display:none;
   position: absolute;
-  left:30px;
-  top:40px;
-  width:50px;
-  background-color: azure;
+  left:70px;
+  top:85px;
+  width:200px;
+  background: rgba(45,45,45, 0.7);
   text-align: center;
+  display: flex;
+  justify-content: space-around;
 }
 .c_movie{
   display:none;
   position: absolute;
-  left:30px;
-  top:40px;
-  width:50px;
-  background-color: azure;
+  left:70px;
+  top:140px;
+  width:260px;
+  background: rgba(45,45,45, 0.7);
   text-align: center;
+  display: flex;
+  justify-content: space-around;
 }
 .c_gym{
   display:none;
   position: absolute;
-  left:30px;
-  top:40px;
-  width:50px;
-  background-color: azure;
+  left:70px;
+  top:195px;
+  width:260px;
+  background: rgba(45,45,45, 0.7);
   text-align: center;
+  display: flex;
+  justify-content: space-around;
 }
 .c_music{
   display:none;
   position: absolute;
-  left:30px;
-  top:40px;
-  width:50px;
-  background-color: azure;
+  left:70px;
+  top:250px;
+  width:250px;
+  background: rgba(45,45,45, 0.7);
   text-align: center;
+  display: flex;
+  justify-content: space-around;
 }

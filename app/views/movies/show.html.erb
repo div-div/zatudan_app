@@ -19,7 +19,7 @@
             <%= comment.comment %>
           </div>
           <div class="comments__box__time">
-            <%= comment.created_at.strftime("%-m%d%-H%M") %>
+            <%= comment.created_at.strftime("%Y年%m月%d日 %H時%M分") %>
           </div>
           <div class="comments__box__user">
             <%= comment.user.nickname %>
@@ -39,3 +39,4 @@
     <% end %>
   </div>
 </div>
+<a class="btn" href="/">投稿一覧へ戻る</a>

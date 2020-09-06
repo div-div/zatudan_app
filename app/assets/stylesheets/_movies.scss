@@ -1,8 +1,10 @@
 .header {
   width: 100%;
-  height: 200px;
+  height: 250px;
 }
 .header__top {
+  padding-top: 30px;
+  margin-top: 30px;
   font-size: 90px;
   background-image: image-url("head.jpeg");
   background-size: contain;
@@ -36,8 +38,11 @@
 .cat__btn {
   color: white;
   text-decoration: none;
+  // width:150px;
+  // height:70px;
+  // background-color: white;
 }
 
-.topimg {
-  z-index: 0;
+.top-img {
+  padding-bottom: 50px;
 }

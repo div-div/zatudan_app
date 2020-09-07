@@ -1,15 +1,24 @@
 <%= render "header" %>
 <div class="movie-show">
+  <marquee class="room" bgcolor="white" width="100%" height="50"
+    scrollamount="2" scrolldelay="2" direction="left" behavior="alternate">
   Chatroom
+  </marquee>
+
   <div class="movie-show__title">
     <%= @movie.title %>
   </div>
   <div class="movie-show__image">
     <%= image_tag @movie.image.to_s, size: "300x200" %>
   </div>
-  <div class="movie-show__body">
-    <%= @movie.body %>
+  <div class="people">投稿者：
     <%= @user.nickname %>
+  </div>
+  <div class="odai">
+     <%= @movie.body %>
+  </div>
+
+  <div class="movie-show__body">
   </div>
   <div class="comments">
     <% if @comments %>
@@ -28,15 +37,19 @@
       <% end %>
     <% end %>
   </div>
-  <div class="comment">
-    <% if current_user %>
-      <%= form_with(model: [@movie, @comment], local: true) do |form| %>
-        <%= form.text_area :comment, placeholder: "Comment", class: "comment__area" %>
-        <%= form.submit "Submit", class: "comment__btn" %>
-      <% end %>
-    <% else %>
-      <p>Need login</p>
+<div class="comment">
+  <% if current_user %>
+    <%= form_with(model: [@movie, @comment], local: true) do |form| %>
+      <%= form.text_area :comment, placeholder: "Comment", class: "comment__area" %>
+      <%= form.submit "Submit", class: "comment__btn" %>
     <% end %>
-  </div>
+  <% else %>
+    <p class="needlog">※コメントするにはログインしてください</p>
+  <% end %>
+ </div>
 </div>
-<a class="btn" href="/">投稿一覧へ戻る</a>
+
+<a class="btn" href="/">投稿一覧</a>
+<% if user_signed_in? && @movie.user_id == current_user.id %>
+<a class="edit"><%= link_to '編集', edit_movie_path, class: 'edit_btn' %></a>
+<% end %>

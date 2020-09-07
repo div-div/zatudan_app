@@ -32,3 +32,8 @@ music = Category.create(:name => "音楽")
 music_hiphop = music.children.create(:name => "ヒップホップ")
 music_lofi = music.children.create(:name => "LO-FI")
 music_rock = music.children.create(:name => "ロック")
+Admin.create!(
+   name: 'testtest',
+   email: 'test@test.com',
+   password: 'testtest',
+)

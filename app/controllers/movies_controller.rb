@@ -29,12 +29,28 @@ class MoviesController < ApplicationController
 
   end
 
+  def edit
+    @movie = Movie.find(params[:id])
+
+  end
+
+  def update
+    @movie = Movie.find(params[:id])
+    @movie.update(movie_params)
+  
+    if
+      redirect_to movie_path
+      else
+        render 'edit'
+    end
+  end
+
   def create
 
     @movie = Movie.new(movie_params)
     @movie.user_id = current_user.id
     if @movie.save!
-      # binding.pry
+
 
       redirect_to root_path
     else

@@ -13,9 +13,9 @@ $(function(){
         var select_cook = `<div class='select_box' id='sub-category'>
                                  <p>小カテゴリー</p>
                                  <select class="wrap__new-movie__field__window" id="child_category" name="movie[sub_category]">
-                                   <option value="1" >和</option>
-                                   <option value="2" >洋</option>
-                                   <option value="3" >中</option>
+                                   <option value="1" >和食</option>
+                                   <option value="2" >洋食</option>
+                                   <option value="3" >中華</option>
                                  <select>
                            </div>`;
         $('.category').append(select_cook);  //select_cookを親カテゴリーのしたに追加する

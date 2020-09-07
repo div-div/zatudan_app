@@ -10,13 +10,16 @@
         <div class="postMovie">
           <%= link_to new_movie_path, class: 'log_btn' do %>
             <div class="postMovie__text">
-              post
+              投稿
             </div>
             <div class="postMovie__icon">
               <%= icon('fas', 'film', class: "icon") %>
             </div>
           <% end %>
         </div>
+        <% elsif admin_signed_in? %>
+       <div>管理者</div>
+       <div><%= link_to "ログアウト", destroy_admin_session_path, class: 'adimn_out', method: :delete %></div>
       <% else %>
         <div class="item">
           <%= link_to "ログイン", new_user_session_path, class: 'log_btn' %>
@@ -24,7 +27,10 @@
         <div class="item">
           <%= link_to "新規登録", new_user_registration_path, class: 'log_btn' %>
         </div>
+        <div><%= link_to "管理者", new_admin_path, method: :get %></div>
       <% end %>
+
+
     </div>
   </div>
   <div class="cat">

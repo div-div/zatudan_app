@@ -1,0 +1,13 @@
+<% @users.each do |user| %>
+    <div class="wrapper__movies__box__name">
+
+
+      <div class="wrapper__movies__box__name__title">
+        <%= user.nickname %>
+      </div>
+    </div>
+  
+
+
+  <% end %>
+<%= link_to 'トップページへ', movies_path %>

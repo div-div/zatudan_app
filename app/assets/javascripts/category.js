@@ -58,6 +58,11 @@ $(function(){
       break;
     }
   });
+  $('.slide').hide();
+  $('.c_cook').hide();
+  $('.c_movie').hide();
+  $('.c_gym').hide();
+  $('.c_music').hide();
 
   $('.cat__btn').click(    //ここはホバーよりクリックの方が良いと思います。
     function() {

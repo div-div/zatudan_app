@@ -49,6 +49,10 @@ test:
 #
 production:
   <<: *default
-  database: movie_app_production
+  database: movie_app
   username: movie_app
+  url: postgres://ahudyoxqldshis:22d9f4dfbfd516e7fdcfcd26a7e615d715048a4a8569ff03c72c6ef5f7b8734f@ec2-52-1-95-247.compute-1.amazonaws.com:5432/d1vu38atjtr2ef
   password: <%= ENV['MOVIE_APP_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
